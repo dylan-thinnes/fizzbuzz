@@ -1,0 +1,17 @@
+#!/usr/bin/env -S dc -f
+[
+  # Push quux, buzz, fizz to stack if mod 7, mod 5, mod 3 are 0
+  d [[Quux]r]ss 7% 0=s
+  d [[Buzz]r]ss 5% 0=s
+  d [[Fizz]r]ss 3% 0=s
+
+  # Remove n if fizz or buzz are on stack
+  [s_]s_ z1!=_
+
+  # Print all words on stack
+  [nz0!=_]s_l_x
+  []ps_
+
+  # Sometimes need to try to read twice? Bug?
+  [?]s_ ? z0=_ z0!=x
+]sx ?z0!=x
