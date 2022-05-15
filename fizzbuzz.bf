@@ -81,13 +81,24 @@
 # CLEAR MODULO TRACKER
 <[-]
 
-# IF "NO TEXT CREATED" BIT IS HIGH PRINT NUMBER
-# TODO
-<<<[-]
+<<<
+
+# IF "NO TEXT CREATED" BIT IS HIGH PRINT NUMBER ASCIIWISE
+[-
+  # MOVE OVER BY 1 SO THAT TAGS CAN BE DISTINGUISHED FROM LOOP
+  >[->+<]>
+  # SPLIT INTEGER INTO LITTLE ENDIAN DIGITS WITH TAGS EG 589 TO 1 9 1 8 1 5
+  [
+    >>>>+<<<<
+    [->+<[->+<[->+<[->+<[->+<[->+<[->+<[->+<[->+<[->[-]>+>>-<]]]]]]]]]]
+    >>>>[-<<<<+>>>>>>>>>]<<<
+    <<<<
+  ]
+  # PRINT TAGGED DIGITS
+  <<[->++++++++++++++++++++++++++++++++++++++++++++++++.[-]<<<]
+]
 
 # PRINT NEWLINE
 ++++++++++.[-]
-
->[-]< # CLEAR FOR NEXT ITERATION
 
 <] # INFINITE LOOP
