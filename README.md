@@ -8,6 +8,7 @@ Includes:
 - J (array programming language)
 - dc (reverse polish notation calculator)
 - JQ (JSON querying and transformation language)
+- Befunge (a 2D stack-based programming language, a fungeoid)
 - Rust
 - Haskell
 - C
