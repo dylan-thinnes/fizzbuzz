@@ -81,6 +81,44 @@
 # CLEAR MODULO TRACKER
 <[-]
 
+# RETURN TO ORIGINAL N AND DUPLICATE
+<<
+[->+>+<<]>>[-<<+>>]<<
+>
+
+# CHECK MOD 7
+[->
+
+  # IF ZERO SET TO FIVE
+  # ALWAYS DECREMENT
+  # USE NOT PROC
+  >+>+->+<<<
+  [>-]>>[-<]>[-]<<
+
+  [-<+++++++>]<-
+
+<]
+
+>
+
+# IF ZERO THEN N MUST BE MOD 7 SO PRINT QUUX
+# USE NOT PROC
+>+>+->+<<<
+[>-]>>[-<]>[-]<<
+
+[->
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.
+  ++++++++++++++++++++++++++++++++
+  ++++..
+  +++.
+  [-]
+
+  # CLEAR "NO TEXT CREATED" BIT
+  <<<<<[-]>>>>>
+<]
+
+# CLEAR MODULO TRACKER
+<[-]
 <<<
 
 # IF "NO TEXT CREATED" BIT IS HIGH PRINT NUMBER ASCIIWISE
