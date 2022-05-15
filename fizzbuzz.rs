@@ -1,18 +1,29 @@
-use std::io::Write;
-use std::io::StdoutLock;
+use std::io::{Write, BufRead};
 
-fn main () {
-    fizzbuzz(std::io::stdout().lock());
-}
+fn main () { fizzbuzz(); }
 
-fn fizzbuzz (mut out: StdoutLock<'_>) -> std::io::Result<()> {
-    for i in 1.. {
+fn fizzbuzz () -> std::io::Result<()> {
+    let stdout = std::io::stdout();
+    let mut stdout = stdout.lock();
+
+    let stdin = std::io::stdin();
+    let stdin = stdin.lock().lines();
+
+    for line in stdin {
+        // Parse line
+        let line = line?;
+        let i: isize = match line.parse() {
+            Ok(i) => i,
+            Err(_) => continue
+        };
+
+        // Print matching words
         let mut printed: bool = false;
-        if i % 3 == 0 { write!(out, "Fizz")?; printed = true; }
-        if i % 5 == 0 { write!(out, "Buzz")?; printed = true; }
-        if i % 7 == 0 { write!(out, "Quux")?; printed = true; }
-        if !printed { write!(out, "{i}")?; }
-        writeln!(out)?;
+        if i % 3 == 0 { write!(stdout, "Fizz")?; printed = true; }
+        if i % 5 == 0 { write!(stdout, "Buzz")?; printed = true; }
+        if i % 7 == 0 { write!(stdout, "Quux")?; printed = true; }
+        if !printed { write!(stdout, "{i}")?; }
+        writeln!(stdout)?;
     }
 
     Ok(())
