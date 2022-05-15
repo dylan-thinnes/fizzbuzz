@@ -3,7 +3,7 @@ together over the years.
 
 Includes:
 
-- brainfsck (turing tarpit)
+- brainfuck (turing tarpit)
 - AWK (pattern scanning and processing language)
 - J (array programming language)
 - dc (reverse polish notation calculator)
