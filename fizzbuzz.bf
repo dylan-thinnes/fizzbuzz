@@ -14,7 +14,7 @@
   # IF ZERO SET TO THREE
   # ALWAYS DECREMENT
   # USE NOT PROC
-  >+>+->+<<<
+  >+>>+<<<
   [>-]>>[-<]>[-]<<
 
   [-<+++>]<-
@@ -25,7 +25,7 @@
 
 # IF ZERO THEN N MUST BE MOD 3 SO PRINT FIZZ
 # USE NOT PROC
->+>+->+<<<
+>+>>+<<<
 [>-]>>[-<]>[-]<<
 
 [->
@@ -53,7 +53,7 @@
   # IF ZERO SET TO FIVE
   # ALWAYS DECREMENT
   # USE NOT PROC
-  >+>+->+<<<
+  >+>>+<<<
   [>-]>>[-<]>[-]<<
 
   [-<+++++>]<-
@@ -64,7 +64,7 @@
 
 # IF ZERO THEN N MUST BE MOD 5 SO PRINT BUZZ
 # USE NOT PROC
->+>+->+<<<
+>+>>+<<<
 [>-]>>[-<]>[-]<<
 
 [->
@@ -92,7 +92,7 @@
   # IF ZERO SET TO FIVE
   # ALWAYS DECREMENT
   # USE NOT PROC
-  >+>+->+<<<
+  >+>>+<<<
   [>-]>>[-<]>[-]<<
 
   [-<+++++++>]<-
@@ -103,7 +103,7 @@
 
 # IF ZERO THEN N MUST BE MOD 7 SO PRINT QUUX
 # USE NOT PROC
->+>+->+<<<
+>+>>+<<<
 [>-]>>[-<]>[-]<<
 
 [->
